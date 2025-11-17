@@ -4,7 +4,7 @@ Note model for storing voice and text notes with AI-generated metadata.
 
 from sqlalchemy import Column, String, Text, Integer, Boolean, DateTime, JSON, Float, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID, ARRAY
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, Mapped, mapped_column
 from datetime import datetime
 import uuid
 
@@ -59,12 +59,22 @@ class Note(Base):
     gdrive_file_url = Column(String(500), nullable=True)
     
     # Processing Status
-    processing_status = Column(String(20), default="pending")  # pending, processing, completed, failed
+    processing_status = Column(String(20), default="pending")
     error_message = Column(Text, nullable=True)
     
-    # Timestamps
-    created_at = Column(DateTime, default=datetime.utcnow, nullable=False, index=True)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    # Timestamps (corrected)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=datetime.utcnow,
+        nullable=False
+    )
+
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=datetime.utcnow,
+        onupdate=datetime.utcnow,
+        nullable=False
+    )
     
     # Relationships
     user = relationship("User", back_populates="notes")

@@ -1,6 +1,19 @@
 """
 Add Note page - Create audio or text notes
+
 """
+# Add to: 1_Add_Note.py, 2_Search.py, 3_Insights.py, 4_Settings.py, 5_Google_Drive.py
+
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from utils import require_login, render_sidebar_user_info
+
+# Check authentication
+require_login()
+
+# Then in the sidebar section, add:
+render_sidebar_user_info()
 
 import streamlit as st
 import requests
@@ -60,6 +73,12 @@ with tab1:
                         if response.status_code == 201:
                             note = response.json()
                             st.success("✅ Note saved successfully!")
+                            if 'search_performed' in st.session_state:
+                                del st.session_state['search_performed']
+                            if 'search_results' in st.session_state:
+                                del st.session_state['search_results']
+
+                            
                             
                             # Show results
                             st.markdown("---")

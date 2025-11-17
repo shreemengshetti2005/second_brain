@@ -1,6 +1,18 @@
 """
 Insights page - AI-powered insights and analytics
 """
+# Add to: 1_Add_Note.py, 2_Search.py, 3_Insights.py, 4_Settings.py, 5_Google_Drive.py
+
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from utils import require_login, render_sidebar_user_info
+
+# Check authentication
+require_login()
+
+# Then in the sidebar section, add:
+render_sidebar_user_info()
 
 import streamlit as st
 import requests
