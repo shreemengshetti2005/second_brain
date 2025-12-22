@@ -15,7 +15,8 @@ router = APIRouter(prefix="/users", tags=["users"])
 
 @router.get("/me")
 async def get_current_user(
-    
+    user_id: str,
+    db: Session = Depends(get_db)
 ):
     """
     Get current user information.
