@@ -25,9 +25,7 @@ Key goals:
 
    git clone https://github.com/shreemengshetti2005/second_brain.git
 
-2. Open the folder in your preferred editor (VS Code, Obsidian, etc.)
-
-3. Explore the folders and the templates. Start by creating a note in the appropriate section and use the templates as a guide.
+2. Explore the folders and the templates. Start by creating a note in the appropriate section and use the templates as a guide.
 
 ## Recommended structure
 
@@ -66,24 +64,5 @@ Consistent metadata makes notes easier to filter and reuse.
 - Keep evergreen notes concise and focused on a single idea.
 - Use tags sparingly and consistently.
 
-## Contributing
 
-Contributions are welcome. If you have templates, automation scripts, or structure improvements that help others build their second brain, please open a pull request with a clear description and examples.
-
-When proposing changes:
-- Add or update templates in /templates
-- Document new conventions in this README or a CONTRIBUTING.md
-- Provide examples where helpful
-
-## License
-
-This repository is provided under the MIT License — see the LICENSE file for details.
-
-## Contact
-
-If you have questions or want to collaborate, open an issue or reach out via GitHub Discussions.
-
----
-
-Thank you for using this repository as the foundation of your Second Brain. Make it yours: iterate often, refine conventions, and keep the system lightweight so it actually gets used.
 
