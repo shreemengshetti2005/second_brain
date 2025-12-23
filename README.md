@@ -19,8 +19,6 @@ Key goals:
 - Templates for capturing ideas, meeting notes, and project plans
 - Examples and guidance so the repository is a usable baseline, not an empty shell
 
-> Note: This repo is intentionally general-purpose — adapt sections to tools you prefer (Obsidian, Notion, Markdown files, etc.).
-
 ## Getting started
 
 1. Clone the repository
@@ -88,3 +86,4 @@ If you have questions or want to collaborate, open an issue or reach out via Git
 ---
 
 Thank you for using this repository as the foundation of your Second Brain. Make it yours: iterate often, refine conventions, and keep the system lightweight so it actually gets used.
+
